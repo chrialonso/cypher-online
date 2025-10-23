@@ -6,7 +6,6 @@
 - **KDF-Based Key Derivation** - Secure password-based encryption keys
 - **Client-Side Encryption** – Passwords are encrypted locally before upload; Supabase never sees plaintext
 - **Cross-Device Access** – Sign in from anywhere and access your credentials securely
-- **Local Backup** – Keeps an encrypted local SQLite copy for offline access
 - **Category Organization** - Organize credentials by type
 - **Favorites Organization** - Organize credentials by favorites
 
