@@ -11,7 +11,7 @@
 
 ## Security Design & Features
 
-- **Supabase Integration**
+- **Supabase Integration**  
   Provides cloud backup with real-time syncing across devices and secure user authentication.
   
 - **Master Password–Derived Key**  
