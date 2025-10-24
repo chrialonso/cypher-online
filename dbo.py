@@ -325,6 +325,7 @@ def get_category(user_id, encryption_key):
     cursor.execute('select category, website from passwords where user_id = ?',  (user_id,))
     rows = cursor.fetchall()
     for category, website in rows:
+        decrypted_website = decrypt_password(encrypted_website, encryption_key)
         categories.append((category, website))
     conn.close()
     return categories
