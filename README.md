@@ -9,6 +9,27 @@
 - **Category Organization** - Organize credentials by type
 - **Favorites Organization** - Organize credentials by favorites
 
+## Security Design & Features
+
+- **Supabase Integration**
+  Provides cloud backup with real-time syncing across devices and secure user authentication.
+  
+- **Master Password–Derived Key**  
+The encryption key is derived from your master password using a key-derivation function (KDF).
+This means that only your password can unlock your encrypted data, not Cypher or Supabase.
+
+- **Secure Cloud Sync**   
+Encrypted credentials are synced with Supabase using authenticated sessions.
+Data stored in the cloud remains encrypted, ensuring that only your device can decrypt it.
+
+- **Cross-Device Access**  
+When you log in on a new device, Cypher downloads your encrypted credentials
+and decrypts them locally using your master password.
+This keeps your data portable without sacrificing security.
+
+- **Offline Compatibility**  
+Works seamlessly with local storage; your credentials remain accessible even without an internet connection.
+
 ## Screenshots
 
 <div align="center">
