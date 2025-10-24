@@ -35,6 +35,11 @@ def decrypt_password(encrypted_password, key):
     Decrypt URL-safe base64 string containing IV + tag + ciphertext with AES-GCM.
     Returns the plaintext password.
     """
+    if isinstance(encrypted_password, bytes):
+        encrypted_password = encrypted_password.decode()
+
+    encrypted_password += "=" * ((4 - len(encrypted_password) % 4) % 4)
+    
     encrypted_data = urlsafe_b64decode(encrypted_password.encode())
     iv = encrypted_data[:12]
     tag = encrypted_data[12:28]
